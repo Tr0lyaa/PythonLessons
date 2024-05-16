@@ -1,7 +1,7 @@
 my_list = ["яблоко", "банан", "апельсин", "ананас", "гранат", "мандарин"]
 print("List:", my_list)
 print("First element: " + my_list[0], "Last element: " + my_list[-1], sep="\n")
-print("Sublist:", my_list[2:4])
+print("Sublist:", my_list[2:5])
 my_list[2] = "груша"
 print("Modified list: ", my_list, "\n" , sep="")
 
