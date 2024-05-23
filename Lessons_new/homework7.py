@@ -7,8 +7,8 @@ my_dict.update({'Alina': 1995, 'Ellina': 1996})
 print(f'Modified dictionary: {my_dict}', end='\n\n')
 
 my_set = {1, 2, 1, 1, 'Python', 'Python', 'Hello', 'World'}
-print(my_set)
+print(f'Set: {my_set}')
 my_set.add(3)
 my_set.update({'!!!', 123})
 my_set.remove(1)
-print(my_set)
+print(f'Modified set: {my_set}')
