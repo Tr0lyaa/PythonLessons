@@ -1,5 +1,3 @@
-import random
-
 def get_multiplied_digits(number):
     first = int(number[0])
     if len(number) == 1:
