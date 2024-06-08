@@ -1,6 +1,8 @@
 from nim_engine import get_bunches, put_stones, is_gameover, take_from_bunch, check_pos, check_qua
 from termcolor import cprint, colored
+import os
 
+os.system('color')
 put_stones()
 user_number = 1
 
