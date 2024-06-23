@@ -16,6 +16,9 @@ class Human:
         print(self._legs)
         print(self.__arms)
 
+    def say_hello(self):
+        print('Здраствуйте')
+
 class Student(Human):
     pass
 
