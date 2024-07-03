@@ -9,11 +9,11 @@ class WordsFinder:
         all_words = {}
         for name in self.file_names:
             alpha_line = ''
-            with (open(name, 'r', encoding='utf-8') as file):
+            with open(name, 'r', encoding='utf-8') as file:
                 for line in file:
-                    line.replace('\n', '')
                     for i in range(len(line)):
-                        if line[i] not in [',', '.', '=', '!', '?', ';', ':'] and line[i-1:i+1] != ' - ':
+                        if line[i] not in [',', '.', '=', '!', '?', ';', ':', '-'] \
+                                or (line[i-1].isalpha() and line[i+1].isalpha() and line[i] == '-'):
                             alpha_line += line[i].lower()
 
                 all_words.update({name: alpha_line.split()})
