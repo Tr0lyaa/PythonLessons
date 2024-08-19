@@ -43,10 +43,6 @@ class Cafe:
 
     def discuss_guests(self):
         no_guest_tables = 0
-        for table in self.tables:
-            if table.guest is None:
-                no_guest_tables += 1
-
         while no_guest_tables < len(self.tables):
             for table in self.tables:
                 if table.guest is None and not self.queue.empty():
@@ -64,7 +60,6 @@ class Cafe:
 tables = [Table(number) for number in range(1, 6)]
 guests_names = ['Maria', 'Oleg', 'Vakhtang', 'Sergey', 'Darya', 'Arman',
                 'Vitoria', 'Nikita', 'Galina', 'Pavel', 'Ilya', 'Alexandra']
-guests_names = guests_names[0:randint(4, 12)]
 guests = [Guest(name) for name in guests_names]
 cafe = Cafe(*tables)
 cafe.guest_arrival(*guests)
