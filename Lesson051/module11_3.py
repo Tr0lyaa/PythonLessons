@@ -23,6 +23,8 @@ def introspection_info(obj):
         module_name = module_name[1].replace("'", "")
         list_attr = [attr for attr in obj.__dict__]
     list_methods = [x for x in dir(obj) if x not in list_attr]
+    if not list_attr:
+        list_attr = list_methods
     info.update({'attributes': list_attr, 'methods': list_methods, 'module': module_name})
 
     if type(obj) is MyClass:
