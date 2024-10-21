@@ -1,0 +1,18 @@
+INFO | "test_run" выполнен успешно
+WARNING | Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "C:\Python\GitHub project\PythonLessons\PythonLessons\Module 12 - Поддержка цикла разработки\4. Логирование\tests_12_4.py", line 24, in test_run
+    test_runner = rt.Runner(213)
+                  ^^^^^^^^^^^^^^
+  File "C:\Python\GitHub project\PythonLessons\PythonLessons\Module 12 - Поддержка цикла разработки\4. Логирование\rt_with_exceptions.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано int
+INFO | "test_walk выполнен успешно"
+WARNING | Неверная скорость для Runner
+Traceback (most recent call last):
+  File "C:\Python\GitHub project\PythonLessons\PythonLessons\Module 12 - Поддержка цикла разработки\4. Логирование\tests_12_4.py", line 13, in test_walk
+    test_runner = rt.Runner("Test", speed=-10)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\GitHub project\PythonLessons\PythonLessons\Module 12 - Поддержка цикла разработки\4. Логирование\rt_with_exceptions.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -10
