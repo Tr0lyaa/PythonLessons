@@ -22,7 +22,5 @@ price INTEGER NOT NULL
 
 def get_all_products():
     all_products = cursor.execute("SELECT id, title, description, price FROM Products").fetchall()
+    connection.commit()
     return all_products
-
-
-connection.commit()
