@@ -8,6 +8,7 @@ from crud_functions import *
 api = ""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
+initiate_db()
 
 kb1 = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton(text='Информация')
@@ -24,8 +25,6 @@ kb2 = InlineKeyboardMarkup(
     ]
 )
 
-all_products = get_all_products()
-
 
 @dp.message_handler(commands=['start'])
 async def start(message):
@@ -39,6 +38,7 @@ async def inform(message):
 
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
+    all_products = get_all_products()
     for i in range(4):
         with open(f"products/{i + 1}.png", "rb") as img:
             await message.answer(f"Название: {all_products[i][1]} | Описание: {all_products[i][2]} "

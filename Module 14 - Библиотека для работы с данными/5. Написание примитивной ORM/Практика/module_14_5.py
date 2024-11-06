@@ -9,6 +9,7 @@ from crud_functions import *
 api = ""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
+initiate_db()
 
 kb1 = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton(text='Регистрация')
